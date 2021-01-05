@@ -1,11 +1,11 @@
-function s=num2roman(n)
+function varargout=num2roman(n)
 %NUM2ROMAN Roman numerals.
 %   NUM2ROMAN(N) returns modern Roman numeral form of integer N, which can
 %	be scalar (returns a string), vector or matrix (returns a cell array of
 %	strings, same size as N).
 %
 %	The function uses strict rules whith substractive notation and commonly
-%	found 'MMMM' form for 4000. It includes also parenthesis notation for 
+%	found 'MMMM' form for 4000. It includes also parenthesis notation for
 %	large numbers (multiplication by 1000). It considers only the integer
 %	part of N.
 %
@@ -16,34 +16,34 @@ function s=num2roman(n)
 %
 %	See also ROMAN2NUM.
 %
-%	Author: François Beauducel <beauducel@ipgp.fr>
+%	Author: FranÃ§ois Beauducel <beauducel@ipgp.fr>
 %	  Institut de Physique du Globe de Paris
 %	Created: 2005
-%	Modified: 2014-12-02
+%	Modified: 2021-01-05
 
-%	Copyright (c) 2005-2014, François Beauducel, covered by BSD License.
+%	Copyright (c) 2005-2021, FranÃ§ois Beauducel, covered by BSD License.
 %	All rights reserved.
 %
-%	Redistribution and use in source and binary forms, with or without 
-%	modification, are permitted provided that the following conditions are 
+%	Redistribution and use in source and binary forms, with or without
+%	modification, are permitted provided that the following conditions are
 %	met:
 %
-%	   * Redistributions of source code must retain the above copyright 
+%	   * Redistributions of source code must retain the above copyright
 %	     notice, this list of conditions and the following disclaimer.
-%	   * Redistributions in binary form must reproduce the above copyright 
-%	     notice, this list of conditions and the following disclaimer in 
+%	   * Redistributions in binary form must reproduce the above copyright
+%	     notice, this list of conditions and the following disclaimer in
 %	     the documentation and/or other materials provided with the distribution
-%	                           
-%	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
-%	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
-%	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
-%	ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
-%	LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-%	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
-%	SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
-%	INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
-%	CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
-%	ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+%
+%	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+%	AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+%	IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+%	ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+%	LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+%	CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+%	SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+%	INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+%	CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+%	ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 %	POSSIBILITY OF SUCH DAMAGE.
 
 error(nargchk(1,1,nargin))
@@ -78,6 +78,13 @@ end
 % converts to string if n is empty
 if isempty(n)
 	s = '';
+end
+
+% only display without output argument
+if nargout == 0
+	disp(s)
+else
+	varargout{1} = s;
 end
 
 
