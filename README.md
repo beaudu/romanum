@@ -41,4 +41,4 @@ or the 2 expressions `MDXV` and `MCCCCCXV` both return `1515`:
 **François Beauducel**, [IPGP](www.ipgp.fr), [beaudu](https://github.com/beaudu), beauducel@ipgp.fr
 
 ## Documentation
-Type `doc num2roman` and `doc roman2num` for help and syntax.
+Type `doc num2roman` and `doc roman2num` for help and syntax. See also [![View ROMAN2NUM and NUM2ROMAN: modern Roman numerals on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://fr.mathworks.com/matlabcentral/fileexchange/26161-roman2num-and-num2roman-modern-roman-numerals) for users community comments.
